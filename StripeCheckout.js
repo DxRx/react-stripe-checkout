@@ -212,7 +212,7 @@ export default class ReactStripeCheckout extends React.Component {
     if (typeof this.props.onScriptTagCreated === 'function') {
       this.props.onScriptTagCreated(script);
     }
-
+    script.crossOrigin = 'anonymous';
     script.src = 'https://checkout.stripe.com/checkout.js';
     script.async = 1;
 
